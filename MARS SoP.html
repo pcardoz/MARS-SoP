@@ -1,0 +1,2013 @@
+<p><strong>MiSeq Library Prep SOP</strong> <br>
+<strong>MARS Facility</strong> <br>
+Peter Cardoz <br>
+Dr. Kendra Maas <br>
+Version 1 <br>
+Date: 2016-12-15</p>
+
+<hr>
+
+
+
+<h1 id="table-of-contents"><strong>Table of Contents</strong></h1>
+
+<p><div class="toc">
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a><ul>
+<li><a href="#workflow">Workflow</a><ul>
+<li><a href="#11-published-protocols">1.1.) Published Protocols</a></li>
+<li><a href="#12-initial-set-up">1.2.) Initial Set up</a><ul>
+<li><a href="#121-dual-index-plates">1.2.1.) Dual Index Plates</a></li>
+<li><a href="#122-16s-sample-intake-and-extraction">1.2.2.) 16S Sample intake and extraction:</a></li>
+</ul>
+</li>
+<li><a href="#13-extraction">1.3.) Extraction</a></li>
+<li><a href="#14-edna-quantification">1.4.) eDNA Quantification</a><ul>
+<li><a href="#141-dna-dilution-and-edna-quantification">1.4.1.) DNA Dilution and eDNA quantification</a></li>
+</ul>
+</li>
+<li><a href="#15-pcr">1.5.) PCR</a><ul>
+<li><a href="#151-common-pcr-master-mixes">1.5.1.) Common PCR Master Mixes</a></li>
+<li><a href="#152-thermocycler-conditions">1.5.2.) Thermocycler Conditions</a></li>
+</ul>
+</li>
+<li><a href="#16-pcr-quantification">1.6.) PCR Quantification</a><ul>
+<li><a href="#161-qiaxcel-quantification">1.6.1.) QIAxcel Quantification:</a></li>
+</ul>
+</li>
+<li><a href="#17-normalization-pooling-and-cleanup">1.7.) Normalization, Pooling, and Cleanup</a><ul>
+<li><a href="#171-epmotion-normalization">1.7.1.) epMotion Normalization</a></li>
+<li><a href="#172-pcr-clean-up">1.7.2.) PCR Clean Up</a></li>
+<li><a href="#173-quantification-of-cleaned-pcr-pools">1.7.3.) Quantification of Cleaned PCR Pools</a></li>
+</ul>
+</li>
+<li><a href="#18-genome-quantification-preparation-and-cleanup">1.8.) Genome quantification, preparation, and cleanup</a><ul>
+<li><a href="#181-nextera-xt-sample-preparation">1.8.1.) Nextera XT Sample Preparation</a></li>
+</ul>
+</li>
+<li><a href="#19-sequencing">1.9.) Sequencing </a></li>
+<li><a href="#110-run-monitoring">1.10.) Run Monitoring</a></li>
+<li><a href="#111-washes-and-data-transfer">1.11.) Washes and Data Transfer</a></li>
+</ul>
+</li>
+<li><a href="#appendices">Appendices</a><ul>
+<li><a href="#appendix-a-primer-design">Appendix A: Primer Design</a><ul>
+<li><a href="#i5-primers">i5 Primers</a></li>
+<li><a href="#i7-primers">i7 Primers</a></li>
+</ul>
+</li>
+<li><a href="#appendix-b-epmotion-5075-labware">Appendix B: epMotion 5075 Labware</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+<hr>
+
+
+
+<h2 id="workflow"><strong>Workflow</strong></h2>
+
+
+
+<h3 id="11-published-protocols"><strong>1.1.) Published Protocols</strong></h3>
+
+<blockquote>
+  <p>The following methods and references are used in the workflows below. <br>
+       - <a href="http://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/miseq-system-guide-15027617-01.pdf">MiSeq System User Guide</a> <br>
+       - <a href="http://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/miseq-denature-dilute-libraries-guide-15039740-01.pdf">Preparing DNA Libraries for Sequencing on the MiSeq</a> <br>
+       - <a href="https://www.qiagen.com/us/resources/resourcedetail?id=6578e70d-9cfe-457e-be13-3b15556b41ca&amp;lang=en">QIAgility User Manual</a> <br>
+       - <a href="https://www.qiagen.com/us/resources/resourcedetail?id=e3edf734-1e5a-4ebf-957e-a35e120d6290&amp;lang=en">QIAxcel Advanced User Manual</a> <br>
+       - <a href="https://www.eppendorf.com/US-en/service-support/knowledge-base/literature/manuals/?knowledgebase%5Bsort%5D=fileSize&amp;knowledgebase%5Border%5D=descending&amp;knowledgebase%5Bcontroller%5D=Assets&amp;cHash=c51463e9b5f165456b98b563bc47786c#top">epMotion 5075 Operating Manual</a> <br>
+       - <a href="https://mobio.com/media/wysiwyg/pdfs/protocols/27100-4-EP.pdf">MoBio PowerMag Soil DNA Isolation Kit</a> <br>
+       - <a href="http://omegabiotek.com/store/wp-content/uploads/2014/06/M1386-Mag-Bind-RXNPure-Plus-Combo-Online-1.pdf">OMEGA bio-tek Mag-Bind RXNPure Plus</a> <br>
+       - <a href="http://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/samplepreps_nextera/nextera-xt/nextera-xt-library-prep-guide-15031942-01.pdf">Nextera XT DNA Library Preparation Kit</a> <br>
+       - <a href="https://tools.thermofisher.com/content/sfs/manuals/Qubit_dsDNA_HS_Assay_UG.pdf">Qubit dsDNA HS Assay Kit</a> <br>
+       - <a href="https://tools.thermofisher.com/content/sfs/manuals/mp07581.pdf">Quant-iT PicoGreen dsDNA Assay Kit</a> <br>
+       - <a href="http://www.mbl.edu/jbpc/files/2014/05/Bio-Tek_Synergy_HT_User_Manual.pdf">BioTek Synergy HT User Manual</a></p>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="12-initial-set-up"><strong>1.2.) Initial Set up</strong></h3>
+
+
+
+<h4 id="121-dual-index-plates"><strong>1.2.1.) Dual Index Plates</strong></h4>
+
+<ol>
+<li>Indexed primers shod be ordered to 200nM in a 96-well plate. See Appendix D for primer design.</li>
+<li>Using epMotion 5075 protocol <strong>PrimerStocktoMaster</strong> (<em>MARS/MARS COMMON</em>), array undiluted 200nM indexed primer plates into a BioRad 96-well semi-skirted plate using the scheme found in the Primers folder (<em>Z: MarsData/Primers</em>). Label each plate with primer arrangement, master plate, and date (v4.SASB 10μM Master Plate 2016-12-15, v4.SASC 10μM Master Plate 2016-12-15, etc). This 10μM Master Plate will allow you to make approximately 40 10μM working plates.</li>
+<li>Using epMotion 5075 protocol <strong>PrimerAliquot</strong> (<em>MARS/MARS COMMON</em>), aliquot 4.8μL of each forward and reverse indexed primers into the corresponding well of an Eppendorf 96-well full-skirted plate. This protocol will make 3 working plates. Label the plates using the label maker like so: v4.SASB 10μM Working Plate 2016-12-15 <br>
+<strong>NOTE</strong>: These 10μM plates can be stored at -20°C and used for subsequent runs.</li>
+</ol>
+
+
+
+<h4 id="122-16s-sample-intake-and-extraction"><strong>1.2.2.) 16S Sample intake and extraction:</strong></h4>
+
+<ol>
+<li>Requestors must submit raw samples in 2mL barcoded tubes (supplied by MARS) and extracted DNA in 1mL barcoded tubes (supplied by MARS) or plates that will be barcoded by MARS (preferred). Investigators must submit a <a href="http://mars.uconn.edu/project-submission/">Project</a> and <a href="http://mars.uconn.edu/upload-sample/">Sample</a> submission form via <a href="mars.uconn.edu">mars.uconn.edu</a> that identifies investigator PoC, lab name, sample name, sample ID (barcode on 1mL and 2mL tubes), and any other pertinent information (polymerase preferences, negative controls, etc.). <br>
+<ol><li>If submitting samples in a plate, MARS will assign a SampleID for each sample in the plate.</li></ol></li>
+<li>Extraction plates will be barcoded (EID#####) using the TSC BarTender labeler. Racks containing raw environmental or fecal samples will also be barcoded (RS####) and their contents (well position and tube barcode) uploaded to the LIMS prior to transferring samples to the MoBio PowerMag Bead plate.</li>
+<li>The “Transfer Book” function within the LIMS (under Workflow) will show the wells of the MoBio bead plate, allowing you to scan the sample barcode and touch the sample’s destination well.</li>
+<li>Extract template DNA following the MoBio PowerMag Soil DNA Isolation Kit protocol into 96-well format leaving one well for a negative control (95 samples max).</li>
+<li>Wipe down the surfaces of the epMotion and the tools with 100% ethanol. Follow the provided MoBio Extraction protocol, loading the worktable of the epMotion as outlined in the protocol <strong>PowerMag_Extraction</strong> (<em>MARS/MARS COMMON</em>). This protocol has several user intervention steps, as well as a tip replacement step, and takes approximately 3 hours to complete.</li>
+</ol>
+
+<blockquote>
+  <p>For eDNA submissions, upload the samples to Workflow/Sample Plate Book in the LIMS after uploading the initial project submission and sample submission. After, move directly to section 1.4.) eDNA Quantification.</p>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="13-extraction"><strong>1.3.) Extraction</strong></h3>
+
+<blockquote>
+  <p>A full extraction of 94 Samples + 1 Extraction blank + 1 empty well for PCR negatives will take ~4 hours to run on the epMotion. If samples are not preloaded into the bead plate, the extraction will approximately 6 hours to complete from start to finish. <br>
+  <strong>When loading the plate, use no more than 0.25g of solid sample (or no more 250μL of liquid sample).</strong> <br>
+  If your centrifuge doesn’t achieve the desired speed, use this to calculate the appropriate time and speed necessary: <script type="math/tex" id="MathJax-Element-3">\frac{4500}{Max \ centrifuge \ speed} = Centrifugation \ time</script></p>
+</blockquote>
+
+<ol>
+<li>Before starting, wipe down the biosafety cabinet. Pull out 3x 100mL epMotion Reservoirs, 2x 30mL epMotion Reservoirs, the necessary amount of weighing funnels (~1 per sample), and 2x foil plate seals (1 for sealing prior to loading the plate and the other sliced into strips for covering up each row after loading samples) and place them in the hood to UV (15-30 minutes minimum). Once the reservoirs have been UV’d, fill the prerobot reservoirs with the correct volumes, making sure to label which reservoir contains what solution.</li>
+<li>Go to the LIMS <script type="math/tex" id="MathJax-Element-4">\to</script> Workflow <script type="math/tex" id="MathJax-Element-5">\to</script> Transfer book, type in the extraction ID (EID#####) and click begin transfer. Scan each barcode and select the destination well. Pierce the well with a 1mL tip, place a funnel into the destination well (if necessary/desired), and transfer no more than 0.25g of sample into the well. At the end of each row, reseal the row with the sliced foil plate seals that were made earlier. Click confirm to save the destination well. Do this for the entire plate. For extraction blanks, you must manually type in the sample ID (e.g., EID17BlankA01).</li>
+<li>Once the entire plate has been loaded and each row has been resealed, spin down the bead plate at 4500 RCF (or as close to 4500 RCF as possible) for 30s to 1 min. Remove the foil seals in the hood.</li>
+<li>Add 750μL of the PowerMag Bead Solution to each well.</li>
+<li>Add 60μL of the PowerMag Lysis Solution to each well. Secure the Square Well Mat (originally on the plate prior to loading) tightly to the Bead Plate. If this is not properly sealed, the plate WILL leak during the bead beating step.</li>
+<li>Place the Bead plate within the bead beater (place the label facing forward), making sure to place a balance in the other arm. Shake at speed 20 for 10 minutes. After the first 10 minute cycle, rotate the block so that the label is facing the back of the shaker and shake again for 10 minutes on speed 20.</li>
+<li>Centrifuge the Bead plate for 6 minutes at 4500 x g.</li>
+<li>Carefully remove the Square Well Mat without splashing and transfer ~500μL of the supernatant to a clean 1mL Collection Plate.</li>
+<li>Add 450μL of PowerMag IRT Solution to each well and apply sealing tape to the 1mL Collection Plate. Vortex the plate horizontally for 5s to ensure the plate is well mixed. Incubate at 4C for 10 minutes. Centrifuge the plate for 6 minutes at 4500 x g.</li>
+<li>Carefully remove the sealing tape and transfer ~850μL of the supernatant to a new clean 1mL Collection Plate. Reseal the plate with sealing tape and centrifuge at 4500 x g for 6 minutes.</li>
+<li>Transfer ~850μL of the supernatant to a clean 2mL Deep Well Plate, avoiding any residual pellet.</li>
+<li>Fill the robot reservoirs with the necessary solutions and place them within the robot. Add the beads to the binding solution last, as the beads will separate from the binding solution within 3 minutes. Place the 2mL Deep Well Plate within the robot and begin the protocol.</li>
+<li>There are 3 intervention steps that must be confirmed to continue the protocol.</li>
+<li>Upon completion, seal the 96-well elution plate with a foil seal and label the plate with the extraction ID using the label maker.</li>
+</ol>
+
+<table>
+<thead>
+<tr>
+  <th align="center">Solution</th>
+  <th align="center">Volume of Solution (96 Samples)</th>
+  <th align="center">Reservoir type</th>
+  <th align="center">Manual (Prerobot) or Robot?</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">Bead Solution</td>
+  <td align="center">75mL</td>
+  <td align="center">100mL Reservoir</td>
+  <td align="center">Prerobot</td>
+</tr>
+<tr>
+  <td align="center">Lysis Solution</td>
+  <td align="center">6mL</td>
+  <td align="center">30mL Reservoir</td>
+  <td align="center">Prerobot</td>
+</tr>
+<tr>
+  <td align="center">IRT Solution</td>
+  <td align="center">45mL</td>
+  <td align="center">100mL Reservoir</td>
+  <td align="center">Prerobot</td>
+</tr>
+<tr>
+  <td align="center">Wash Solution</td>
+  <td align="center">174mL</td>
+  <td align="center">400mL Reservoir</td>
+  <td align="center">Robot</td>
+</tr>
+<tr>
+  <td align="center">Elution Buffer</td>
+  <td align="center">11mL</td>
+  <td align="center">30mL Reservoir</td>
+  <td align="center">Robot</td>
+</tr>
+<tr>
+  <td align="center">Binding Solution</td>
+  <td align="center">85mL</td>
+  <td align="center">100mL Reservoir</td>
+  <td align="center">Robot</td>
+</tr>
+<tr>
+  <td align="center">Beads</td>
+  <td align="center">2mL</td>
+  <td align="center">100mL Reservoir (Add to binding solution)</td>
+  <td align="center">Robot</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h3 id="14-edna-quantification"><strong>1.4.) eDNA Quantification</strong></h3>
+
+
+
+<h4 id="141-dna-dilution-and-edna-quantification"><strong>1.4.1.) DNA Dilution and eDNA quantification</strong></h4>
+
+<ol>
+<li>All DNA submissions to MARS and DNA extractions will be quantified using the PicoGreen Protocol.</li>
+<li>Dilute DNA 1:200 with the epMotion protocol <strong>1-200_DNAdilution</strong> (<em>MARS/MARS COMMON</em>), using Molecular Biology Grade water.</li>
+<li>Prepare standards from the 100 μg/mL PicoGreen stock in concentrations of 2, 1, 0.5, 0.2, 0.1, 0.02, 0.01, and 0 ng/μL in 1XTE and aliquot 100μL from each concentration into an 8-well PCR strip (store unused aliquots in -20C until needed). </li>
+<li>Make working solution by diluting PicoGreen reagent 1:200 with 1XTE in a 30mL reservoir. Total solution in reservoir: 75 μL x (8 standards + # samples) + extra). Keep protected from light by wrapping in foil and in drawer until prompted to add to worktable. </li>
+<li>Populate epMotion worktable according to <strong>pico384_2016Nov16</strong> protocol (<em>MARS/MARS COMMON</em>). Be sure that the correct labware is loaded for the DNA plate (tubes, plate, etc.). This protocol adds 25μL picogreen working solution and 25μL 1:200 DNA or 25μL standard into each well in triplicate (50μL total volume) creating an assay plate from the 1:200 DNA for reading in the Synergy Plate reader. Run program.</li>
+<li>During incubation, create experiment on the Synergy Plate Reader by clicking New Task <script type="math/tex" id="MathJax-Element-6">\to</script> Read Now <script type="math/tex" id="MathJax-Element-7">\to</script> <strong>picogreen_384.prt</strong>. Be sure plate 1 shows the correct configuration and click Read New to begin.</li>
+<li>Create export of concentrations by choosing the plate wanted and the page with blue arrow icon at the top of the screen. Accept the defats chosen, and start the export. This will create an excel file with concentrations, as well as a graphical output of the standards. Save this file on USB and paste the values into <strong>template.picogreen.2016Sep09</strong> (<em>Z: MarsData/Synergy</em>) to calculate sample concentrations.</li>
+<li>Discard the 1:200 dilution plate. Create a 1:10 dilution plate if DNA concentrations are above 30ng/μL (or higher dilution if necessary).</li>
+<li>After creating the 1:10 dilution plate, upload the original plate ID, dilution plate ID, and dilution factor (eg. 1:10 dilution should be entered as 10) to the LIMS under Workflow/DNA Plate Dilutions.</li>
+</ol>
+
+<blockquote>
+  <p>A working solution for a full plate of 96 samples + 8 standards requires 43μL picogreen reagent and 8507μL 1XTE.</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+  <th align="center">Concentration</th>
+  <th align="center">Volume of Standard</th>
+  <th align="center">Volume of 1X TE</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">2ng/μL</td>
+  <td align="center">10 of <strong>100μg/mL Stock</strong></td>
+  <td align="center">490μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">1ng/μL</td>
+  <td align="center">10 of <strong>100μg/mL Stock</strong></td>
+  <td align="center">990μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">0.5ng/μL</td>
+  <td align="center">250 of <strong>1ng/μL dilution</strong></td>
+  <td align="center">250μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">0.2ng/μL</td>
+  <td align="center">100 of <strong>1ng/μL dilution</strong></td>
+  <td align="center">400μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">0.1ng/μL</td>
+  <td align="center">50 of <strong>1ng/μL dilution</strong></td>
+  <td align="center">450μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">0.02ng/μL</td>
+  <td align="center">10 of <strong>1ng/μL dilution</strong></td>
+  <td align="center">490μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">0.01ng/μL</td>
+  <td align="center">5 of <strong>1ng/μL dilution</strong></td>
+  <td align="center">495μL 1X TE</td>
+</tr>
+<tr>
+  <td align="center">0ng/μL</td>
+  <td align="center">0μL</td>
+  <td align="center">500μL 1X TE</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h3 id="15-pcr"><strong>1.5.) PCR</strong></h3>
+
+<blockquote>
+  <p>A full plate of 96 samples will take ~1 hour to prep using the epMotion. <br>
+  This section below will cover setup on the epMotion 5075. This PCR protocol and associated calcations are for triplicate reactions with GoTaq or Accuprime polymerases.</p>
+</blockquote>
+
+<ol>
+<li>Using eDNA concentration found from the Synergy reader, calculate the amount of DNA needed per reaction to give 30 ng/μL. Do not use less than 1μL or more than 6μL of input DNA.</li>
+<li>Calculate the amount of MBG water per sample by subtracting the volume of DNA from 6μL.</li>
+<li>Use <strong>EPmotion_PCR1DNA_Template.csv</strong> and <strong>EPmotion_PCR1H2O_Template.csv</strong> (<em>Z:MarsData/EPmotion</em>) for the EpMotion for the addition of water and DNA . Save files as csv.</li>
+<li>On epMotion, load <strong>2Plate_PCR_template</strong> (<em>MARS/MARS COMMON</em>) program. Wipe down surfaces of the epMotion with 100% ethanol. Popate the worktable in the given arrangement. Keep covering closed when not loading worktable.</li>
+<li>For initial sample transfer, load the csv file coordinating to the water volume to be added for each reaction.</li>
+<li>For the second sample transfer, load the csv file coordinating to the DNA volume to be added for each reaction (Eppendorf full-skirted plates into DNA position, Biorad semi-skirted plates into DNA2 position). Be sure to check “change tips after each aspiration” when prompted. </li>
+<li>Create master mix in a 30mL reservoir using the polymerase specific template below. Thoroughly mix contents and place in designated spot on the epMotion.</li>
+<li>Place the 10μM Working Primer plate onto the worktable and start the program. When prompted, remove the DNA plate seals, reseal completed plates, and after all samples have been added, centrifuge the Working Primer plate briefly using the plate spinner.</li>
+<li>Upon completion of the program, seal the 384 well plate using a ThermoFisher Adhesive PCR Plate Foil. Centrifuge the plate briefly and place in the thermocycler using the saved program, outlined below.</li>
+<li>Pool the PCR products to 96 well format on the epMotion using <strong>PCR_384to96</strong> (<em>MARS/MARS COMMON</em>). Load the worktable with the appropriate labware. This will pool triplicate reactions back into single wells.</li>
+</ol>
+
+
+
+<h4 id="151-common-pcr-master-mixes"><strong>1.5.1.) Common PCR Master Mixes</strong></h4>
+
+<blockquote>
+  <p>For 2-step reactions, bead clean the submitted PCR samples to use as input and reduce the reaction volume by half (to 25μL reactions).</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+  <th align="center">PROMEGA GoTaq Master Mix (50μL Reaction)</th>
+  <th align="center">Volume per sample</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">GoTaq Buffer</td>
+  <td align="center">10μL</td>
+</tr>
+<tr>
+  <td align="center">GoTaq Polymerase</td>
+  <td align="center">0.8μL</td>
+</tr>
+<tr>
+  <td align="center">10mM dNTPs</td>
+  <td align="center">1μL</td>
+</tr>
+<tr>
+  <td align="center">50mM MgSO4</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">BSA</td>
+  <td align="center">2μL</td>
+</tr>
+<tr>
+  <td align="center">0.1mM Non-Illumina Forward (515F)</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">0.1mM Non-Illumina Reverse (806R)</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">Master Mix Water</td>
+  <td align="center">21.1μL</td>
+</tr>
+<tr>
+  <td align="center"><strong>Total Master Mix</strong></td>
+  <td align="center"><strong>35.2μL</strong></td>
+</tr>
+</tbody></table>
+
+
+<table>
+<thead>
+<tr>
+  <th align="center">Accuprime PFX Master Mix (50μL Reaction)</th>
+  <th align="center">Volume per sample</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">Accuprime PFX Reaction Mix</td>
+  <td align="center">5μL</td>
+</tr>
+<tr>
+  <td align="center">Accuprime PFX Polymerase</td>
+  <td align="center">0.5μL</td>
+</tr>
+<tr>
+  <td align="center">50mM MgSO4</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">0.1mM Non-Illumina Forward (515F)</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">0.1mM Non-Illumina Reverse (806R)</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">Master Mix Water</td>
+  <td align="center">34.4μL</td>
+</tr>
+<tr>
+  <td align="center"><strong>Total Master Mix</strong></td>
+  <td align="center"><strong>40.2μL</strong></td>
+</tr>
+</tbody></table>
+
+
+<table>
+<thead>
+<tr>
+  <th align="center">Accuprime PFX Supermix Master Mix (48.2μL - 53.2μL Reaction)</th>
+  <th align="center">Volume per sample</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">Accuprime PFX SuperMix</td>
+  <td align="center">45μL</td>
+</tr>
+<tr>
+  <td align="center">BSA</td>
+  <td align="center">2μL</td>
+</tr>
+<tr>
+  <td align="center">0.1mM Non-Illumina Forward (515F)</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center">0.1mM Non-Illumina Reverse (806R)</td>
+  <td align="center">0.1μL</td>
+</tr>
+<tr>
+  <td align="center"><strong>Total Master Mix</strong></td>
+  <td align="center"><strong>47.2μL</strong></td>
+</tr>
+</tbody></table>
+
+
+
+
+<h4 id="152-thermocycler-conditions"><strong>1.5.2.) Thermocycler Conditions</strong></h4>
+
+<p><strong>2-step Accuprime</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Step</th>
+  <th align="center">Temp</th>
+  <th align="center">Time (mm:ss)</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left">Initial Denaturation</td>
+  <td align="center">95°C</td>
+  <td align="center">02:00</td>
+</tr>
+<tr>
+  <td align="left">8 Cycles</td>
+  <td align="center">95°C</td>
+  <td align="center">00:15</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">55°C</td>
+  <td align="center">00:30</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">68°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left">Final Extension</td>
+  <td align="center">68°C</td>
+  <td align="center">05:00</td>
+</tr>
+<tr>
+  <td align="left">Hold</td>
+  <td align="center">4°C</td>
+  <td align="center"><script type="math/tex" id="MathJax-Element-8">\infty</script></td>
+</tr>
+</tbody></table>
+
+
+<p><strong>2-step GoTaq</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Step</th>
+  <th align="center">Temp</th>
+  <th align="center">Time (mm:ss)</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left">Initial Denaturation</td>
+  <td align="center">95°C</td>
+  <td align="center">02:00</td>
+</tr>
+<tr>
+  <td align="left">8 Cycles</td>
+  <td align="center">95°C</td>
+  <td align="center">00:30</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">55°C</td>
+  <td align="center">00:30</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">72°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left">Final Extension</td>
+  <td align="center">72°C</td>
+  <td align="center">05:00</td>
+</tr>
+<tr>
+  <td align="left">Hold</td>
+  <td align="center">4°C</td>
+  <td align="center"><script type="math/tex" id="MathJax-Element-9">\infty</script></td>
+</tr>
+</tbody></table>
+
+
+<p><strong>v4/ITS Accuprime</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Step</th>
+  <th align="center">Temp</th>
+  <th align="center">Time (mm:ss)</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left">Initial Denaturation</td>
+  <td align="center">95°C</td>
+  <td align="center">02:00</td>
+</tr>
+<tr>
+  <td align="left">30 Cycles</td>
+  <td align="center">95°C</td>
+  <td align="center">00:15</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">55°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">68°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left">Final Extension</td>
+  <td align="center">68°C</td>
+  <td align="center">05:00</td>
+</tr>
+<tr>
+  <td align="left">Hold</td>
+  <td align="center">4°C</td>
+  <td align="center"><script type="math/tex" id="MathJax-Element-10">\infty</script></td>
+</tr>
+</tbody></table>
+
+
+<p><strong>v4 Accuprime Supermix</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Step</th>
+  <th align="center">Temp</th>
+  <th align="center">Time (mm:ss)</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left">Initial Denaturation</td>
+  <td align="center">95°C</td>
+  <td align="center">05:00</td>
+</tr>
+<tr>
+  <td align="left">30 Cycles</td>
+  <td align="center">95°C</td>
+  <td align="center">00:15</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">55°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">68°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left">Final Extension</td>
+  <td align="center">68°C</td>
+  <td align="center">05:00</td>
+</tr>
+<tr>
+  <td align="left">Hold</td>
+  <td align="center">4°C</td>
+  <td align="center"><script type="math/tex" id="MathJax-Element-11">\infty</script></td>
+</tr>
+</tbody></table>
+
+
+<p><strong>v4/ITS GoTaq</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Step</th>
+  <th align="center">Temp</th>
+  <th align="center">Time (mm:ss)</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left">Initial Denaturation</td>
+  <td align="center">95°C</td>
+  <td align="center">02:00</td>
+</tr>
+<tr>
+  <td align="left">30 Cycles</td>
+  <td align="center">95°C</td>
+  <td align="center">00:30</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">55°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">72°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left">Final Extension</td>
+  <td align="center">72°C</td>
+  <td align="center">05:00</td>
+</tr>
+<tr>
+  <td align="left">Hold</td>
+  <td align="center">4°C</td>
+  <td align="center"><script type="math/tex" id="MathJax-Element-12">\infty</script></td>
+</tr>
+</tbody></table>
+
+
+<p><strong>v4 Phusion</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Step</th>
+  <th align="center">Temp</th>
+  <th align="center">Time (mm:ss)</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left">Initial Denaturation</td>
+  <td align="center">94°C</td>
+  <td align="center">03:00</td>
+</tr>
+<tr>
+  <td align="left">30 Cycles</td>
+  <td align="center">94°C</td>
+  <td align="center">00:45</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">50°C</td>
+  <td align="center">01:00</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="center">72°C</td>
+  <td align="center">01:30</td>
+</tr>
+<tr>
+  <td align="left">Final Extension</td>
+  <td align="center">72°C</td>
+  <td align="center">10:00</td>
+</tr>
+<tr>
+  <td align="left">Hold</td>
+  <td align="center">4°C</td>
+  <td align="center"><script type="math/tex" id="MathJax-Element-13">\infty</script></td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h3 id="16-pcr-quantification"><strong>1.6.) PCR Quantification</strong></h3>
+
+<blockquote>
+  <p>A full plate will take approximately 30 minutes to run on the QIAxcel. Samples must be arranged in rows prior to running.</p>
+</blockquote>
+
+<ol>
+<li>All samples are run on the QIAxcel to check for PCR products.</li>
+<li>If a PCR has less than 96 samples, it must be configured into <strong>ROWS</strong> as each run on the QIAxcel is a row.</li>
+<li>Dilute 2μL of PCR product into 10μL of QX DNA Dilution Buffer. Every row that is run on the QIAxcel must have the buffer in each of the wells in that row, even if there is no sample in that well.</li>
+</ol>
+
+
+
+<h4 id="161-qiaxcel-quantification"><strong>1.6.1.) QIAxcel Quantification:</strong></h4>
+
+<blockquote>
+  <p>For initial cartridge setup and buffer tray set up, please refer to the QIAxcel Advanced User Manual.</p>
+</blockquote>
+
+<ol>
+<li>Ensure that the cartridge, alignment marker, and size marker are at room temperature prior to running samples. </li>
+<li>Load the cartridge (generally Fast Analysis) into the machine. If there isn’t already an alignment marker strip, prepare and load the alignment marker strip (15μL alignment marker per well, with a drop of mineral oil on top) into the Marker 1 position of the buffer tray.</li>
+<li>If there isn’t a recent Size Marker Table saved (the QIAxcel will have a green circle next to the saved Size Marker Table if it is recent), load 10μL of Size Marker (50bp - 1.5kb) into an empty well on your plate. If you are running a full plate, load a 12-tube strip containing 10μL of water or buffer in 11 tubes and 10μL  of size marker in the last tube. Save this size marker for use as a future Size Marker Table. <br>
+<ol><li>In the Analysis tab at the top, choose the experiment just run (usually at the bottom on the left side) and the lane in which the size marker was run. Click the reference marker tab at the top of the gel image. Check to make sure the number of bands in the size marker chosen matches the manufacturer number. Choose the Save As button and name the size marker table (Ex. 2016Dec15_FAMarker).</li></ol></li>
+<li>Run samples under Defat Fast Analysis v2.0, with V4 Peak Calling Instruction. This will create a log of peaks and concentration that fall within 15% of 400 bp to transfer back to LIMS. Choose “saved reference marker table” if you previously ran and saved a size marker. If you loaded a size marker onto the QIAxcel dilution plate, choose “run marker side by side”.</li>
+<li>Select the rows with samples and identify the size marker by using the right mouse button (if loaded onto the plate). Check and pre-run warnings or checks, and hit “run”.</li>
+<li>Upon completion, export peak calling table from <em>Computer/localdisk/programdata/Qiagen/QiaxcelScreenGel/Data/Export</em>.</li>
+<li>Record PCR concentrations on the sample summary sheet and upload to the LIMS.</li>
+</ol>
+
+<hr>
+
+
+
+<h3 id="17-normalization-pooling-and-cleanup"><strong>1.7.) Normalization, Pooling, and Cleanup</strong></h3>
+
+
+
+<h4 id="171-epmotion-normalization"><strong>1.7.1.) epMotion Normalization</strong></h4>
+
+<ol>
+<li>Calculate the volume required per sample to pool 10ng of PCR product. Pooling is done to the samples with concentrations &gt;0.5ng/μL AND to all negative controls (use the same volume as required for the lowest concentration sample, but do NOT exceed 10μL). </li>
+<li>After calculating the required volumes to get 10ng per sample, paste the volumes and PCR well positions into the <strong>EPmotion_PCR_Normalization_Template.csv</strong> (<em>Z:MARSData/EPmotion</em>) and put this file on a USB. </li>
+<li>On the epMotion, open <strong>PostPCR_Pooling</strong> (<em>MARS/MARS COMMON</em>) and import the previously saved csv into the sample transfer step, making sure to choose pipette samples individually.</li>
+<li>Populate the workdeck with the appropriate labware and run the protocol.</li>
+<li>Using the LIMS, download the pooling template (<em>Reports/Templates tab</em>). Make sure to add the PCR negative to this sheet as the LIMS will not add it. </li>
+<li>Type in the sequencing run ID (label as Run Date, Flowcell ID, Sequencing ID; ex. 20161215AV688SID16020). For samples that were not pooled, type “yes” under the exclude column. Upload this sheet to the LIMS for Sample Sheet creation.</li>
+</ol>
+
+
+
+<h4 id="172-pcr-clean-up"><strong>1.7.2.) PCR Clean Up</strong></h4>
+
+<blockquote>
+  <p>Prior to cleaning the samples, you MUST allow the OMEGA bio-tek Mag-Bind RXNPure Plus beads to reach room temperature. Failure to do so will not clean your samples properly and may cause the sequencing run to fail. Wait times will vary depending on how weak or strong your magnet is. If you find that the beads aren’t separating properly, increase the separation time accordingly.</p>
+</blockquote>
+
+<ol>
+<li>Clean pooled PCR products using the OMEGA bio-tek Mag-Bind RXNPure Plus to remove DNA fragments &lt;150bp from PCR products.</li>
+<li>Using a Biorad semiskirted plate (or a 0.5mL tube strip), add 50μL of the pooled PCR product to 40μL of beads (1:0.8 ratio), pipette a few times to mix, and incubate at room temperature for 5 minutes. <br>
+<ol><li>Amplicon pools can be cleaned with less than 50μL, but do not go below a total reaction volume of 20μL (12μL of sample).</li></ol></li>
+<li>Place the plate on a magnet for 3 minutes, and once the beads separate, discard the supernatant.</li>
+<li>Without removing the plate from the magnet, wash with 200μL 70% ethanol, incubate for 1 minute, and then discard the supernatant. Do not resuspend the beads during this step. Repeat this for a total of 2 washes.</li>
+<li>Using a p-20, remove excess ethanol. Allow the sample to air dry for 5 minutes and then remove the plate from the magnet.</li>
+<li>Add 25μL of water and resuspend the beads by pipetting. Incubate at room temperature for 3 minutes.</li>
+<li>Place the plate on the magnet for 3 minutes and then transfer the supernatant. This is the cleaned PCR product.</li>
+<li>Run on the QIAxcel to check if the &lt;150bp fragments were removed (optional).</li>
+</ol>
+
+
+
+<h4 id="173-quantification-of-cleaned-pcr-pools"><strong>1.7.3.) Quantification of Cleaned PCR Pools</strong></h4>
+
+<ol>
+<li>Quantify cleaned library using the Qubit. Prepare working solution for n+2 tubes, 200μL buffer: 1μL dye. Generally, you will need to quantify each sample at least twice.</li>
+<li>Prepare standards 1 and 2 by using two Qubit assay tubes with 10μL of standard 1 or 2 and 190μL of working solution. Incubate at room temperature, in the dark for 3 minutes.</li>
+<li>Prepare samples and 1.5ng standard (user prepared) by using Qubit assay tubes with 2μL of sample and 198μL of working solution. Incubate at room temperature, in the dark, for 3 minutes.</li>
+<li>Read standards, then samples, and calculate concentrations on the Qubit by selecting the sample volume used (2μL).</li>
+<li>Libraries should be adjusted to 4nM (1.5ng/μL for MARS’ V4 primers) with Molecular Biology Grade water. If samples are amplified using non-MARS’ V4 primers, calculate the ng/μL required by using the formula below.</li>
+</ol>
+
+<blockquote>
+  <p>Calcating ng/μL required to get to 4nM: <br>
+  <script type="math/tex; mode=display" id="MathJax-Element-24">
+		(\frac{μg}{μL}) DNA * (\frac{1 \ pmol}{660 \ pg}) * (\frac{10^6 \ pg} {1 \ μg}) * (\frac {1}{N}) = \frac {pmol}{μL} \ DNA
+		</script> <br>
+          <script type="math/tex; mode=display" id="MathJax-Element-25">
+		0.004 \  \frac {pmol}{μL}  = 4 \ nM 
+		</script> <br>
+          <script type="math/tex; mode=display" id="MathJax-Element-26">
+		\frac {ng}{μL} \ DNA = (\frac {0.004 \ pmol}{μL} \ DNA) * (\frac {660 \ pg}{pmol}) * (\frac {1 \ μg}{10^6 \ pg}) * (\frac {1 \ ng}{10^6 \ μg}) * N
+		</script> <br>
+          Where N is the number of nucleotides (bp) and <script type="math/tex" id="MathJax-Element-27">\frac {660pg}{pmol}</script> is the average molecular weight of a nucleotide pair. <br>
+          <strong>NOTE: Illumina suggests to dilute samples down to 4nM, however we have noticed that this concentration leads to an underclustered run. If you experience the same issues, dilute the samples down to 6nM rather than 4nM.</strong> <br>
+  Common sample concentrations:</p>
+  
+  <table>
+<thead>
+<tr>
+  <th>Sample Type</th>
+  <th>Concentration</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>V4 Amplicons (16S)</td>
+  <td>1.5ng/μL</td>
+</tr>
+<tr>
+  <td>V9 Amplicons (18S)</td>
+  <td>1.0ng/μL</td>
+</tr>
+<tr>
+  <td>V2 Amplicons</td>
+  <td>x ng/μL</td>
+</tr>
+<tr>
+  <td>V3 Amplicons</td>
+  <td>x ng/μL</td>
+</tr>
+<tr>
+  <td>Genomes</td>
+  <td>1.5ng/μL</td>
+</tr>
+</tbody></table>
+
+</blockquote>
+
+<hr>
+
+<h3 id="18-genome-quantification-preparation-and-cleanup"><strong>1.8.) Genome quantification, preparation, and cleanup</strong></h3>
+
+
+
+<h4 id="181-nextera-xt-sample-preparation"><strong>1.8.1.) Nextera XT Sample Preparation</strong></h4>
+
+<blockquote>
+  <p>For this protocol, multiple reagents must be pulled out of the freezer ahead of time.  <br>
+  Tagment Reagents: <strong>ATM</strong> &amp; <strong>TD</strong> reagents must be thawed on ice. Pull these reagents out before starting the reactions. <br>
+  Amplification Reagents: <strong>Indices</strong> must be thawed at room temperature. <strong>NPM</strong> reagent must be thawed on ice. Pull these reagents out after placing the samples in the thermocycler for the tagmentation step. <br>
+  We reduce the reaction volumes for all steps by half to reduce the cost per sample.</p>
+</blockquote>
+
+<ol>
+<li>Samples submitted for small genome sequencing shod be quantified using the Qubit protocol and use the Nextera XT Kit for preparation and clean up.</li>
+<li>Qubit quantify submitted DNA and dilute to 0.2 ng/μL (concentrations between 0.17ng/μL and 0.3ng/μL are acceptable).</li>
+<li>Use 2.5μL of the ~0.2ng/μL dilution to enter into the Nextera XT preparation. Reactions can be completed in 0.5mL PCR tubes, strips, or a 96 well semi skirted plate, depending on the number of genomes to be prepared.</li>
+<li>Add 5μL of TD to each sample and pipette to mix.</li>
+<li>Add 2.5μL of ATM to each sample and pipette to mix.</li>
+<li>Place the plate in Thermocycler <strong>CT019662</strong>. Use protocol <strong>NEXTERA_TAG</strong> found in the &lt;<em>Root</em>&gt; folder.</li>
+<li>Upon completion, <strong>IMMEDIATELY</strong> remove the plate from the thermocycler.</li>
+<li>Add 2.5μL of NT and pipette to mix. Quickly centrifuge the plate and incubate at room temperature for 5 minutes.</li>
+<li>Add 7.5μL NPM to each sample.</li>
+<li>Add 2.5μL of the Forward Primer and 2.5μL of the Reverse Primer and pipette to mix. Centrifuge briefly.</li>
+<li>Place the plate in Thermocycler <strong>CT019662</strong>. Use protocol <strong>NEXTERA_PCR</strong> found in the &lt;<em>Root</em>&gt; folder. <br>
+<ol><li>You may stop at this point.</li>
+<li>Do not proceed with library normalization or sequencing protocol as written in the Nextera Protocol. </li></ol></li>
+<li>PCR clean-up and size select amplified tagments as outlined above. Use the OMEGA bio-tek Mag-Bind RXNPure Plus found in the 4C fridge. Use the Alpaqua Magnum FLX magnet to clear the supernatant. </li>
+<li>Genomes shod be brought to 4nM (1.5ng/μL) for sequencing using the Qubit.</li>
+</ol>
+
+<p><a href="#1.7.2.">1.7.2.) PCR Clean Up</a>-PCR-Clean-Up) <br>
+<a href="#my-header">My link</a></p>
+
+<hr>
+
+<h3 id="19-sequencing"><strong>1.9.) Sequencing </strong></h3>
+
+<ol>
+<li>Remove a 500 cycle reagent cartridge from the -20C freezer. Place in room temperature water bath for 1 hour. Place HT1 buffer tube in 4C fridge. While reagent cartridge is thawing, create the Sequencing Run csv by going to the LIMS Workflow and select Sequences. Fill in the required fields (Run Date, Sequence Run ID, Flowcell ID, and Reagent Cartridge) and click submit. Next go to Reports/Templates and select Sample Sheet. Find and select your Sequencing Run ID and select the correct flow cell (if the Sequencing Run was named correctly, the flowcell ID shod match with the 5 middle alphanumeric values). Open this file and CAREFULLY make sure that there are <strong>NO SPACES, PERIODS, DASHES, OR UNDERSCORES</strong> and that all samples have <strong>UNIQUE SAMPLE NAMES AND SAMPLE IDS</strong>. Forgetting to do so will cause issues for the MiSeq during the Indexing QC. Once you are sure that the sample sheet is correct, save this file to <strong>Z:MarsData/SeqSampleSheet</strong>.</li>
+<li>Prepare fresh 0.1N NaOH by diluting the provided 0.2N NaOH aliquots with 475μL of nuclease free H2O and vortex.</li>
+<li>Denature and dilute 16S library and any other libraries. All similar samples - 16S, genomes, etc - shod be combined according to the number of samples in each single library (i.e. if a library has 37 samples, 37μL should be added to the 4nM pooled libraries tube). Keep these libraries separate until the final loading of the reagent cartridge. <br>
+<ol><li>Mix 5μL of 4nM library with 5μL of NaOH, vortex, and spin down. Incubate at RT for 5 minutes.</li>
+<li>Add 990μL HT1 and vortex. This library is now at 20pM and is good for three weeks if stored at -20C.</li></ol></li>
+<li>Adjust and denature PhiX. <br>
+<ol><li>Mix 2μL 10nM PhiX (aliquot) and 3μL of Tris-Tween (10mM Tris-Cl pH8.5 with 0.1% Tween 20).</li>
+<li>Vortex and spin down.</li>
+<li>Mix 5μL of 4nM PhiX with 5μL of 0.1N NaOH, vortex, and spin down. Incubate at RT for 5 minutes.</li>
+<li>Add 990μL HT1 and vortex. The PhiX is now diluted to 20pM and is good for ~3 weeks if stored at -20C.</li></ol></li>
+<li>Adjust amplicon library to 6pM by combining 300μL of the 20pM amplicon library with 700μL of HT1. Adjust the genome library to 8pM by combining 400μL of the 20pM genome library with 600μL of HT1. Adjust PhiX to 8pM by combining 400μL of 20pM PhiX with 600μL of HT1.</li>
+<li>In a strictly 16S sequencing run, we use 30% PhiX per run. Add 300μL of PhiX to a tube containing 700μL of 16S library, vortex, and chill on ice until ready to load into reagent cartridge. This proportion of PhiX changes with diversity of samples or the inclusion of genomes. A minimum of 1% PhiX shod always be run during sequencing. A full genome run is up to 12 genomes. Final sequencing library shod be in desired ratio to a total volume of 1mL.</li>
+<li>When the reagent cartridge has thawed, dry bottom with a paper towel. Carefly invert the cartridge repeatedly to check each well is thawed, making sure to create as little bubbles as possible. This also serves to mix the reagents. Place in fridge until ready to load.</li>
+<li>Using a clean 1000μL pipette tip in each, pierce the foil covering wells 12, 13, 14, and 17 of the reagent cartridge, leaving the tip in place.</li>
+<li>Transfer 3.4μL of Read 1 Sequencing Primer to the bottom of well 12 and pipette to mix. Repeat this process spiking the Index Primer into well 13 and the Read 2 Sequencing Primer into well 14.</li>
+<li>Pipette 600μL of final library (containing PhiX) into well 17. Place cartridge in fridge until ready to load into MiSeq.</li>
+<li>Unbox flowcell and PR2 bottle.</li>
+<li>Thoroughly rinse the flow cell with DI water. Carefully dry by blotting with Kim wipes. Give special attention to the edges and points of intersection between the glass and plastic.</li>
+<li>Using an alcohol wipe, clean the glass on both sides avoiding the rubber intake ports. Completely dry the flowcell with lens paper.</li>
+<li>Visually inspect the flow cell to ensure there are no blemishes, particles, or fibers on the glass.</li>
+<li>Transfer reagent cartridge, flow cell, PR2 bottle to MiSeq. Once the reagent cartridge is read, select the correct Sample Sheet from <em>Z:/MarsData/SeqSampleSheet</em>. Empty and replace the waste bottle.</li>
+<li>Ensure the machine recognizes the correct sample sheet and the run parameters are correct (specifically the read number).</li>
+<li>Wait for the MiSeq to perform its pre-run checks and press start. The pre-run checks can take anywhere from 5 minutes to 15 minutes, so make sure you press start before walking away from the MiSeq.</li>
+</ol>
+
+<hr>
+
+
+
+<h3 id="110-run-monitoring"><strong>1.10.) Run Monitoring</strong></h3>
+
+<ol>
+<li>The run shod be monitored periodically using Illumina Sequence Analysis Viewer.</li>
+<li>Ideal parameters for a 70% 16S run: <br>
+<ol><li>Cluster density 700-800k/mm2 for v2 kits, however acceptable rests can be had with above 600k/mm2 cluster density.</li>
+<li>Above 80% clusters passing filter</li>
+<li>30% aligned (or percent of total run of PhiX)</li>
+<li>Final &gt;Q30 score of above 80%</li></ol></li>
+</ol>
+
+<hr>
+
+
+
+<h3 id="111-washes-and-data-transfer"><strong>1.11.) Washes and Data Transfer</strong></h3>
+
+<ol>
+<li>Perform a post run was on the MiSeq.</li>
+<li>Dispose of liquid waste in appropriate hazardous jug and reagent cartridge in hazardous bucket. Leave flow cell in place until next sequencing run.</li>
+<li>When MiSeq Reporter finishes, copy the files from the output folder on <strong>insert computer name and folder here</strong> to <em>Z:/MarsData/SequenceResults</em> <br>
+<ol><li>To calculate the number of reads per sample, open up the Demultiplexing file that was copied over to <em>SequenceResults</em>.</li>
+<li>Insert a row below the sample names (Row 2).</li>
+<li>Take the average of the values below the sample name. These are the decimal values that are in the same rows as “s_1_1101” to “s_1_2114”.</li>
+<li>Multiply this average with PF Reads (found under Run Details <script type="math/tex" id="MathJax-Element-18">\to</script> Indexing QC) and then divide this by 100.</li>
+<li>This will give you the total number of reads for each sample.</li>
+<li>Ex. For the first sample (found in cell C2), <script type="math/tex" id="MathJax-Element-19"> Total \ Reads \ (into \ cell \ C3) = \frac {AVERAGE(C4:C31)* PF \ Reads}  {100} </script></li>
+<li>Copy and paste the values back into the cells after the calculation is complete. </li>
+<li>Download the Sequence Results csv from the LIMS. Copy both the Sample Names and Values from the Demultiplexing calculation and transpose them into the csv you just downloaded. </li>
+<li>Fill in the Sequencing Run ID into the first column of the Sequence Results csv and upload that file to the LIMS.</li></ol></li>
+<li>Demtiplex the run by opening MiSeq Reporter in the web browser (in bookmarks). Find the desired file and start process.</li>
+<li><strong>Is this still accurate? On the iMac, copy the Undetermine R1, I, and R2 files from Shared/All/Workgrou/miseq_analyis/MiSeq/(run-specific-folder)/Data/intensities/basecalls to DataRaid/Demtiplexing Sandbox. </strong></li>
+<li>Perform maintenance or standby wash if required.</li>
+<li>Continue into desired Qiime or Mother analysis pipeline as desired.</li>
+</ol>
+
+<blockquote>
+  <p>Copy all sequenced blanks to their appropriate projects (RIDBlanks should go in every project folder that was on that PCR, EIDBlanks should go in every project folder that was on that extraction, etc). <br>
+  Share BaseSpace projects with the requester using the how-to template email. <br>
+  Generate Sample History report to email requestors.</p>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="appendices"><strong>Appendices</strong></h2>
+
+
+
+<h3 id="appendix-a-primer-design"><strong>Appendix A: Primer Design</strong></h3>
+
+<p>Generic V4 Amplicon:</p>
+
+<blockquote>
+  <p>AATGATACGGCGACCACCGAGATCTACAC &lt; i5 &gt;&lt; pad &gt;&lt; link &gt;&lt; 16Sf &gt; </p>
+  
+  <p>CAAGCAGAAGACGGCATACGAGAT &lt; i7 &gt;&lt; pad &gt;&lt; link &gt;&lt; 16Sr &gt; </p>
+  
+  <p>Generic read 1 primer design <br>
+  &lt; pad &gt;&lt; link &gt;&lt; 16Sf &gt; VX.read1</p>
+  
+  <p>Generic read 2 primer design <br>
+  &lt; pad &gt;&lt; link &gt;&lt; 16Sr &gt; VX.read2</p>
+  
+  <p>Generic index read primer design <br>
+  Reverse complement of (&lt; pad &gt;&lt; link &gt;&lt; 16Sr &gt;) VX.p7_index</p>
+  
+  <p>The listed sequences in the generic design, above, are the adapter sequences to allow annealing of the amplicons to the flow cell.  <br>
+      The &lt; i5 &gt; and &lt; i7 &gt; sequences are the 8-nt index sequences. <br>
+      The &lt; pad &gt; is a 10-nt sequence to boost the sequencing primer melting temperatures and is coordinated with each index. <br>
+      The &lt; link &gt; is a 2-nt sequence that is anti-complementary to the known sequences. <br>
+      The &lt; 16Sf &gt; and &lt; 16Sr &gt; are the gene specific primer sequences. <br>
+      Primers are purchased from Invitrogen with desalted purification and in the smallest scale possible. They are brought to 100μM for storage at -20C, and aliquoted into 10μM for reactions. </p>
+</blockquote>
+
+<p>16Sf <br>
+V4: GTGCCAGCMGCCGCGGTAA</p>
+
+<p>16Sr <br>
+V4: GGACTACHVGGGTWTCTAAT</p>
+
+<p>Link: <br>
+V4f: GT <br>
+V4r: CC</p>
+
+<p>Pad: <br>
+Forward: TATGGTAATT <br>
+Reverse: AGTCAGTCAG</p>
+
+
+
+<h4 id="i5-primers"><strong>i5 Primers</strong></h4>
+
+<table>
+<thead>
+<tr>
+  <th>Primer Name</th>
+  <th>Sequence</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>2step_F01</td>
+  <td>TAGATCGC</td>
+</tr>
+<tr>
+  <td>2step_F02</td>
+  <td>CTCTCTAT</td>
+</tr>
+<tr>
+  <td>2step_F03</td>
+  <td>TATCCTCT</td>
+</tr>
+<tr>
+  <td>2step_F04</td>
+  <td>AGAGTAGA</td>
+</tr>
+<tr>
+  <td>2step_F05</td>
+  <td>GTAAGGAG</td>
+</tr>
+<tr>
+  <td>2step_F06</td>
+  <td>ACTGCATA</td>
+</tr>
+<tr>
+  <td>2step_F07</td>
+  <td>AAGGAGTA</td>
+</tr>
+<tr>
+  <td>2step_F08</td>
+  <td>CTAAGCCT</td>
+</tr>
+<tr>
+  <td>cil.v2.501</td>
+  <td>ATCGTACG</td>
+</tr>
+<tr>
+  <td>cil.v2.502</td>
+  <td>ACTATCTG</td>
+</tr>
+<tr>
+  <td>cil.v2.503</td>
+  <td>TAGCGAGT</td>
+</tr>
+<tr>
+  <td>cil.v2.504</td>
+  <td>CTGCGTGT</td>
+</tr>
+<tr>
+  <td>cil.v2.505</td>
+  <td>TCATCGAG</td>
+</tr>
+<tr>
+  <td>cil.v2.506</td>
+  <td>CGTGAGTG</td>
+</tr>
+<tr>
+  <td>cil.v2.507</td>
+  <td>GGATATCT</td>
+</tr>
+<tr>
+  <td>cil.v2.508</td>
+  <td>GACACCGT</td>
+</tr>
+<tr>
+  <td>cil.v2.509</td>
+  <td>CTACTATA</td>
+</tr>
+<tr>
+  <td>cil.v2.510</td>
+  <td>CGTTACTA</td>
+</tr>
+<tr>
+  <td>cil.v2.511</td>
+  <td>AGAGTCAC</td>
+</tr>
+<tr>
+  <td>cil.v2.512</td>
+  <td>TACGAGAC</td>
+</tr>
+<tr>
+  <td>cil.v3.501</td>
+  <td>ATCGTACG</td>
+</tr>
+<tr>
+  <td>cil.v3.502</td>
+  <td>ACTATCTG</td>
+</tr>
+<tr>
+  <td>cil.v3.503</td>
+  <td>TAGCGAGT</td>
+</tr>
+<tr>
+  <td>cil.v3.504</td>
+  <td>CTGCGTGT</td>
+</tr>
+<tr>
+  <td>cil.v3.505</td>
+  <td>TCATCGAG</td>
+</tr>
+<tr>
+  <td>cil.v3.506</td>
+  <td>CGTGAGTG</td>
+</tr>
+<tr>
+  <td>cil.v3.507</td>
+  <td>GGATATCT</td>
+</tr>
+<tr>
+  <td>cil.v3.508</td>
+  <td>GACACCGT</td>
+</tr>
+<tr>
+  <td>fung.its2.501</td>
+  <td>ATCGTACG</td>
+</tr>
+<tr>
+  <td>fung.its2.502</td>
+  <td>ACTATCTG</td>
+</tr>
+<tr>
+  <td>fung.its2.503</td>
+  <td>TAGCGAGT</td>
+</tr>
+<tr>
+  <td>fung.its2.504</td>
+  <td>CTGCGTGT</td>
+</tr>
+<tr>
+  <td>fung.its2.505</td>
+  <td>TCATCGAG</td>
+</tr>
+<tr>
+  <td>fung.its2.506</td>
+  <td>CGTGAGTG</td>
+</tr>
+<tr>
+  <td>fung.its2.507</td>
+  <td>GGATATCT</td>
+</tr>
+<tr>
+  <td>fung.its2.508</td>
+  <td>GACACCGT</td>
+</tr>
+<tr>
+  <td>v4.SA501</td>
+  <td>ATCGTACG</td>
+</tr>
+<tr>
+  <td>v4.SA502</td>
+  <td>ACTATCTG</td>
+</tr>
+<tr>
+  <td>v4.SA503</td>
+  <td>TAGCGAGT</td>
+</tr>
+<tr>
+  <td>v4.SA504</td>
+  <td>CTGCGTGT</td>
+</tr>
+<tr>
+  <td>v4.SA505</td>
+  <td>TCATCGAG</td>
+</tr>
+<tr>
+  <td>v4.SA506</td>
+  <td>CGTGAGTG</td>
+</tr>
+<tr>
+  <td>v4.SA507</td>
+  <td>GGATATCT</td>
+</tr>
+<tr>
+  <td>v4.SA508</td>
+  <td>GACACCGT</td>
+</tr>
+<tr>
+  <td>v4.SB501</td>
+  <td>CTACTATA</td>
+</tr>
+<tr>
+  <td>v4.SB502</td>
+  <td>CGTTACTA</td>
+</tr>
+<tr>
+  <td>v4.SB503</td>
+  <td>AGAGTCAC</td>
+</tr>
+<tr>
+  <td>v4.SB504</td>
+  <td>TACGAGAC</td>
+</tr>
+<tr>
+  <td>v4.SB505</td>
+  <td>ACGTCTCG</td>
+</tr>
+<tr>
+  <td>v4.SB506</td>
+  <td>TCGACGAG</td>
+</tr>
+<tr>
+  <td>v4.SB507</td>
+  <td>GATCGTGT</td>
+</tr>
+<tr>
+  <td>v4.SB508</td>
+  <td>GTCAGATA</td>
+</tr>
+<tr>
+  <td>v4.SC501</td>
+  <td>ACGACGTG</td>
+</tr>
+<tr>
+  <td>v4.SC502</td>
+  <td>ATATACAC</td>
+</tr>
+<tr>
+  <td>v4.SC503</td>
+  <td>CGTCGCTA</td>
+</tr>
+<tr>
+  <td>v4.SC504</td>
+  <td>CTAGAGCT</td>
+</tr>
+<tr>
+  <td>v4.SC505</td>
+  <td>GCTCTAGT</td>
+</tr>
+<tr>
+  <td>v4.SC506</td>
+  <td>GACACTGA</td>
+</tr>
+<tr>
+  <td>v4.SC507</td>
+  <td>TGCGTACG</td>
+</tr>
+<tr>
+  <td>v4.SC508</td>
+  <td>TAGTGTAG</td>
+</tr>
+<tr>
+  <td>v4.SC701</td>
+  <td>CAGTAGGT</td>
+</tr>
+<tr>
+  <td>v4.SC702</td>
+  <td>ATAGCGCT</td>
+</tr>
+<tr>
+  <td>v4.SC703</td>
+  <td>TCTAGACT</td>
+</tr>
+<tr>
+  <td>v4.SC704</td>
+  <td>TCCTCATG</td>
+</tr>
+<tr>
+  <td>v4.SC705</td>
+  <td>CGAGCTAG</td>
+</tr>
+<tr>
+  <td>v4.SC706</td>
+  <td>CTCTAGAG</td>
+</tr>
+<tr>
+  <td>v4.SC707</td>
+  <td>ATGAGCTC</td>
+</tr>
+<tr>
+  <td>v4.SC708</td>
+  <td>AGCATACC</td>
+</tr>
+<tr>
+  <td>v4.SC709</td>
+  <td>CGTCATAC</td>
+</tr>
+<tr>
+  <td>v4.SC710</td>
+  <td>TCAGTCTA</td>
+</tr>
+<tr>
+  <td>v4.SC711</td>
+  <td>CATCGTGA</td>
+</tr>
+<tr>
+  <td>v4.SC712</td>
+  <td>GAGCTCGA</td>
+</tr>
+<tr>
+  <td>v4.SD501</td>
+  <td>AAGCAGCA</td>
+</tr>
+<tr>
+  <td>v4.SD502</td>
+  <td>ACGCGTGA</td>
+</tr>
+<tr>
+  <td>v4.SD503</td>
+  <td>CGATCTAC</td>
+</tr>
+<tr>
+  <td>v4.SD504</td>
+  <td>TGCGTCAC</td>
+</tr>
+<tr>
+  <td>v4.SD505</td>
+  <td>GTCTAGTG</td>
+</tr>
+<tr>
+  <td>v4.SD506</td>
+  <td>CTAGTATG</td>
+</tr>
+<tr>
+  <td>v4.SD507</td>
+  <td>GATAGCGT</td>
+</tr>
+<tr>
+  <td>v4.SD508</td>
+  <td>TCTACACT</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h4 id="i7-primers"><strong>i7 Primers</strong></h4>
+
+<p>(for use in the SEQMET file. When ordering, shod be reverse complement.)</p>
+
+<table>
+<thead>
+<tr>
+  <th>Primer Name</th>
+  <th>Sequence</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>2step_R01</td>
+  <td>TGACCAAT</td>
+</tr>
+<tr>
+  <td>2step_R02</td>
+  <td>CATTTTTA</td>
+</tr>
+<tr>
+  <td>2step_R03</td>
+  <td>ACAGTGAT</td>
+</tr>
+<tr>
+  <td>2step_R04</td>
+  <td>GTGAAATA</td>
+</tr>
+<tr>
+  <td>2step_R05</td>
+  <td>GCCAATAT</td>
+</tr>
+<tr>
+  <td>2step_R06</td>
+  <td>CTTGTATA</td>
+</tr>
+<tr>
+  <td>2step_R07</td>
+  <td>CAGATCAT</td>
+</tr>
+<tr>
+  <td>2step_R08</td>
+  <td>GTAGAGTA</td>
+</tr>
+<tr>
+  <td>2step_R09</td>
+  <td>TAGCTTAT</td>
+</tr>
+<tr>
+  <td>2step_R10</td>
+  <td>CTATACTA</td>
+</tr>
+<tr>
+  <td>2step_R11</td>
+  <td>CTTGTAAT</td>
+</tr>
+<tr>
+  <td>2step_R12</td>
+  <td>GCCAATTA</td>
+</tr>
+<tr>
+  <td>cil.v2.701</td>
+  <td>CGAGAGTT</td>
+</tr>
+<tr>
+  <td>cil.v2.702</td>
+  <td>GACATAGT</td>
+</tr>
+<tr>
+  <td>cil.v2.703</td>
+  <td>ACGCTACT</td>
+</tr>
+<tr>
+  <td>cil.v2.704</td>
+  <td>ACTCACTG</td>
+</tr>
+<tr>
+  <td>cil.v2.705</td>
+  <td>TGAGTACG</td>
+</tr>
+<tr>
+  <td>cil.v2.706</td>
+  <td>CTGCGTAG</td>
+</tr>
+<tr>
+  <td>cil.v2.707</td>
+  <td>TAGTCTCC</td>
+</tr>
+<tr>
+  <td>cil.v2.708</td>
+  <td>CGAGCGAC</td>
+</tr>
+<tr>
+  <td>cil.v2.709</td>
+  <td>ACTACGAC</td>
+</tr>
+<tr>
+  <td>cil.v2.710</td>
+  <td>GTCTGCTA</td>
+</tr>
+<tr>
+  <td>cil.v2.711</td>
+  <td>GTCTATGA</td>
+</tr>
+<tr>
+  <td>cil.v2.712</td>
+  <td>TATAGCGA</td>
+</tr>
+<tr>
+  <td>cil.v3.701</td>
+  <td>CGAGAGTT</td>
+</tr>
+<tr>
+  <td>cil.v3.702</td>
+  <td>GACATAGT</td>
+</tr>
+<tr>
+  <td>cil.v3.703</td>
+  <td>ACGCTACT</td>
+</tr>
+<tr>
+  <td>cil.v3.704</td>
+  <td>ACTCACTG</td>
+</tr>
+<tr>
+  <td>cil.v3.705</td>
+  <td>TGAGTACG</td>
+</tr>
+<tr>
+  <td>cil.v3.706</td>
+  <td>CTGCGTAG</td>
+</tr>
+<tr>
+  <td>cil.v3.707</td>
+  <td>TAGTCTCC</td>
+</tr>
+<tr>
+  <td>cil.v3.708</td>
+  <td>CGAGCGAC</td>
+</tr>
+<tr>
+  <td>cil.v3.709</td>
+  <td>ACTACGAC</td>
+</tr>
+<tr>
+  <td>cil.v3.710</td>
+  <td>GTCTGCTA</td>
+</tr>
+<tr>
+  <td>cil.v3.711</td>
+  <td>GTCTATGA</td>
+</tr>
+<tr>
+  <td>cil.v3.712</td>
+  <td>TATAGCGA</td>
+</tr>
+<tr>
+  <td>fung.its2.701</td>
+  <td>CGAGAGTT</td>
+</tr>
+<tr>
+  <td>fung.its2.702</td>
+  <td>GACATAGT</td>
+</tr>
+<tr>
+  <td>fung.its2.703</td>
+  <td>ACGCTACT</td>
+</tr>
+<tr>
+  <td>fung.its2.704</td>
+  <td>ACTCACTG</td>
+</tr>
+<tr>
+  <td>fung.its2.705</td>
+  <td>TGAGTACG</td>
+</tr>
+<tr>
+  <td>fung.its2.706</td>
+  <td>CTGCGTAG</td>
+</tr>
+<tr>
+  <td>fung.its2.707</td>
+  <td>TAGTCTCC</td>
+</tr>
+<tr>
+  <td>fung.its2.708</td>
+  <td>CGAGCGAC</td>
+</tr>
+<tr>
+  <td>fung.its2.709</td>
+  <td>ACTACGAC</td>
+</tr>
+<tr>
+  <td>fung.its2.710</td>
+  <td>GTCTGCTA</td>
+</tr>
+<tr>
+  <td>fung.its2.711</td>
+  <td>GTCTATGA</td>
+</tr>
+<tr>
+  <td>fung.its2.712</td>
+  <td>TATAGCGA</td>
+</tr>
+<tr>
+  <td>v4.SB701</td>
+  <td>CTCGACTT</td>
+</tr>
+<tr>
+  <td>v4.SB702</td>
+  <td>CGAAGTAT</td>
+</tr>
+<tr>
+  <td>v4.SB703</td>
+  <td>TAGCAGCT</td>
+</tr>
+<tr>
+  <td>v4.SB704</td>
+  <td>TCTCTATG</td>
+</tr>
+<tr>
+  <td>v4.SB705</td>
+  <td>GATCTACG</td>
+</tr>
+<tr>
+  <td>v4.SB706</td>
+  <td>GTAACGAG</td>
+</tr>
+<tr>
+  <td>v4.SB707</td>
+  <td>ACGTGCGC</td>
+</tr>
+<tr>
+  <td>v4.SB708</td>
+  <td>ATAGTACC</td>
+</tr>
+<tr>
+  <td>v4.SB709</td>
+  <td>GCGTATAC</td>
+</tr>
+<tr>
+  <td>v4.SB710</td>
+  <td>TGCTCGTA</td>
+</tr>
+<tr>
+  <td>v4.SB711</td>
+  <td>AACGCTGA</td>
+</tr>
+<tr>
+  <td>v4.SB712</td>
+  <td>CGTAGCGA</td>
+</tr>
+<tr>
+  <td>v4.SC701</td>
+  <td>CAGTAGGT</td>
+</tr>
+<tr>
+  <td>v4.SC702</td>
+  <td>ATAGCGCT</td>
+</tr>
+<tr>
+  <td>v4.SC703</td>
+  <td>TCTAGACT</td>
+</tr>
+<tr>
+  <td>v4.SC704</td>
+  <td>TCCTCATG</td>
+</tr>
+<tr>
+  <td>v4.SC705</td>
+  <td>CGAGCTAG</td>
+</tr>
+<tr>
+  <td>v4.SC706</td>
+  <td>CTCTAGAG</td>
+</tr>
+<tr>
+  <td>v4.SC707</td>
+  <td>ATGAGCTC</td>
+</tr>
+<tr>
+  <td>v4.SC708</td>
+  <td>AGCATACC</td>
+</tr>
+<tr>
+  <td>v4.SC709</td>
+  <td>CGTCATAC</td>
+</tr>
+<tr>
+  <td>v4.SC710</td>
+  <td>TCAGTCTA</td>
+</tr>
+<tr>
+  <td>v4.SC711</td>
+  <td>CATCGTGA</td>
+</tr>
+<tr>
+  <td>v4.SC712</td>
+  <td>GAGCTCGA</td>
+</tr>
+<tr>
+  <td>v4.SD501</td>
+  <td>AAGCAGCA</td>
+</tr>
+<tr>
+  <td>v4.SD502</td>
+  <td>ACGCGTGA</td>
+</tr>
+<tr>
+  <td>v4.SD503</td>
+  <td>CGATCTAC</td>
+</tr>
+<tr>
+  <td>v4.SD504</td>
+  <td>TGCGTCAC</td>
+</tr>
+<tr>
+  <td>v4.SD505</td>
+  <td>GTCTAGTG</td>
+</tr>
+<tr>
+  <td>v4.SD506</td>
+  <td>CTAGTATG</td>
+</tr>
+<tr>
+  <td>v4.SD507</td>
+  <td>GATAGCGT</td>
+</tr>
+<tr>
+  <td>v4.SD508</td>
+  <td>TCTACACT</td>
+</tr>
+<tr>
+  <td>v4.SD701</td>
+  <td>TACTAGGT</td>
+</tr>
+<tr>
+  <td>v4.SD702</td>
+  <td>ACGTACGT</td>
+</tr>
+<tr>
+  <td>v4.SD703</td>
+  <td>CGCGATAT</td>
+</tr>
+<tr>
+  <td>v4.SD704</td>
+  <td>CTATCGTG</td>
+</tr>
+<tr>
+  <td>v4.SD705</td>
+  <td>GCGATACG</td>
+</tr>
+<tr>
+  <td>v4.SD706</td>
+  <td>AGTCGCAG</td>
+</tr>
+<tr>
+  <td>v4.SD707</td>
+  <td>GTTACAGC</td>
+</tr>
+<tr>
+  <td>v4.SD708</td>
+  <td>TAACGTCC</td>
+</tr>
+<tr>
+  <td>v4.SD709</td>
+  <td>CTACGACC</td>
+</tr>
+<tr>
+  <td>v4.SD710</td>
+  <td>GAGACTTA</td>
+</tr>
+<tr>
+  <td>v4.SD711</td>
+  <td>ACTGTGTA</td>
+</tr>
+<tr>
+  <td>v4.SD712</td>
+  <td>TGCGTCAA</td>
+</tr>
+</tbody></table>
+
+
+<table>
+<thead>
+<tr>
+  <th>Primer Name</th>
+  <th>Sequence</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>806rcbc0</td>
+  <td>ACAAGGGA</td>
+</tr>
+<tr>
+  <td>806rcbc1</td>
+  <td>AGTCTCGT</td>
+</tr>
+<tr>
+  <td>806rcbc3</td>
+  <td>CTGGTCGAT</td>
+</tr>
+<tr>
+  <td>806rcbc5</td>
+  <td>TGTGCGAT</td>
+</tr>
+<tr>
+  <td>806rcbc8</td>
+  <td>CAAAGGAT</td>
+</tr>
+<tr>
+  <td>806rcbc9</td>
+  <td>GCGCTGTA</td>
+</tr>
+<tr>
+  <td>806rcbc15</td>
+  <td>TGGTATTC</td>
+</tr>
+<tr>
+  <td>806rcbc21</td>
+  <td>ATGAGCTG</td>
+</tr>
+<tr>
+  <td>806rcbc30</td>
+  <td>GTCAATCT</td>
+</tr>
+<tr>
+  <td>806rcbc33</td>
+  <td>GGGAGTTG</td>
+</tr>
+<tr>
+  <td>806rcbc34</td>
+  <td>TAACGCAA</td>
+</tr>
+<tr>
+  <td>806rcbc40</td>
+  <td>AAGTGTTC</td>
+</tr>
+<tr>
+  <td>806rcbc43</td>
+  <td>AGCGCCTT</td>
+</tr>
+<tr>
+  <td>806rcbc44</td>
+  <td>CCGTATTA</td>
+</tr>
+<tr>
+  <td>806rcbc53</td>
+  <td>CTCATCAT</td>
+</tr>
+<tr>
+  <td>806rcbc56</td>
+  <td>GAGGGATG</td>
+</tr>
+<tr>
+  <td>806rcbc57</td>
+  <td>GCGGTATA</td>
+</tr>
+<tr>
+  <td>806rcbc64</td>
+  <td>GGTAGAGA</td>
+</tr>
+<tr>
+  <td>806rcbc66</td>
+  <td>TAGGTGAG</td>
+</tr>
+<tr>
+  <td>806rcbc69</td>
+  <td>TGTCGATA</td>
+</tr>
+<tr>
+  <td>806rcbc71</td>
+  <td>CAATTACG</td>
+</tr>
+<tr>
+  <td>806rcbc72</td>
+  <td>TAGTCACC</td>
+</tr>
+<tr>
+  <td>806rcbc76</td>
+  <td>GGCAGAAT</td>
+</tr>
+<tr>
+  <td>806rcbc78</td>
+  <td>TATCGTAC</td>
+</tr>
+<tr>
+  <td>806rcbc81</td>
+  <td>TCAGCGCA</td>
+</tr>
+<tr>
+  <td>806rcbc85</td>
+  <td>TAGAACGC</td>
+</tr>
+<tr>
+  <td>806rcbc86</td>
+  <td>AGAACAAC</td>
+</tr>
+<tr>
+  <td>806rcbc87</td>
+  <td>GGAAGTCC</td>
+</tr>
+<tr>
+  <td>806rcbc89</td>
+  <td>AATAGCAG</td>
+</tr>
+<tr>
+  <td>806rcbc93</td>
+  <td>CTACTCCA</td>
+</tr>
+<tr>
+  <td>806rcbc102</td>
+  <td>TCCGTGAC</td>
+</tr>
+<tr>
+  <td>806rcbc104</td>
+  <td>CGGTAGAT</td>
+</tr>
+<tr>
+  <td>806rcbc106</td>
+  <td>CTCCAAGA</td>
+</tr>
+<tr>
+  <td>806rcbc108</td>
+  <td>AGGTGTGC</td>
+</tr>
+<tr>
+  <td>806rcbc110</td>
+  <td>GAGCATGA</td>
+</tr>
+<tr>
+  <td>806rcbc111</td>
+  <td>TGACAGCT</td>
+</tr>
+<tr>
+  <td>806rcbc124</td>
+  <td>TTCGCAGG</td>
+</tr>
+<tr>
+  <td>806rcbc125</td>
+  <td>CGAGAGAA</td>
+</tr>
+<tr>
+  <td>806rcbc127</td>
+  <td>AGCTTAAC</td>
+</tr>
+<tr>
+  <td>806rcbc129</td>
+  <td>ACAATGTC</td>
+</tr>
+<tr>
+  <td>806rcbc130</td>
+  <td>TTGTTGGC</td>
+</tr>
+<tr>
+  <td>806rcbc132</td>
+  <td>CTCGAGGA</td>
+</tr>
+<tr>
+  <td>806rcbc133</td>
+  <td>GCTTGGGT</td>
+</tr>
+<tr>
+  <td>806rcbc137</td>
+  <td>CATTTCTG</td>
+</tr>
+<tr>
+  <td>806rcbc140</td>
+  <td>AAATAACC</td>
+</tr>
+<tr>
+  <td>806rcbc142</td>
+  <td>TGCTATGC</td>
+</tr>
+<tr>
+  <td>806rcbc145</td>
+  <td>AGGGTTCA</td>
+</tr>
+<tr>
+  <td>806rcbc148</td>
+  <td>CAGCATCG</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h3 id="appendix-b-epmotion-5075-labware"><strong>Appendix B: epMotion 5075 Labware</strong></h3>
+
+<table>
+<thead>
+<tr>
+  <th align="center">Labware file name</th>
+  <th align="center">Labware</th>
+  <th align="center">Labware catalog number</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">tip50f</td>
+  <td align="center">50ul epMotion filter tips</td>
+  <td align="center">0030014430</td>
+</tr>
+<tr>
+  <td align="center">tip300f</td>
+  <td align="center">300ul epMotion filter tips</td>
+  <td align="center">0030014472</td>
+</tr>
+<tr>
+  <td align="center">tip1000f</td>
+  <td align="center">1000ul epMotion filter tips</td>
+  <td align="center">0030014510</td>
+</tr>
+<tr>
+  <td align="center">Rack_noTC_1_5ml</td>
+  <td align="center">1.5mL Tube Rack</td>
+  <td align="center">5075751275</td>
+</tr>
+<tr>
+  <td align="center">Th_Adap_96</td>
+  <td align="center">Thermorack for 96-well PCR plates</td>
+  <td align="center">5075787008</td>
+</tr>
+<tr>
+  <td align="center">ALP_MagFLX_96_1</td>
+  <td align="center">Magnum FLX magnet for full-skirted 96 well plates</td>
+  <td align="center">A000400</td>
+</tr>
+<tr>
+  <td align="center">ALP_MagFLX_96_dwp_krm</td>
+  <td align="center">Magnum FLX magnet for MoBio 2mL Deep Well Plates</td>
+  <td align="center">A000400</td>
+</tr>
+<tr>
+  <td align="center">MoBio_PowerMag_ep</td>
+  <td align="center">100mL Reservoir + 30mL Reservoir for Extraction</td>
+  <td align="center">N/A</td>
+</tr>
+<tr>
+  <td align="center">EP_Reserv_400_ep</td>
+  <td align="center">400mL Reservoir</td>
+  <td align="center">5075751364</td>
+</tr>
+<tr>
+  <td align="center">EP_TT_PCR_150_h2</td>
+  <td align="center">Eppendorf full-skirted 96-well plates</td>
+  <td align="center">E951020401</td>
+</tr>
+<tr>
+  <td align="center">EP_TT_PCR_40</td>
+  <td align="center">Eppendorf 384-well plates</td>
+  <td align="center">30132742</td>
+</tr>
+<tr>
+  <td align="center">BioRad_360_2</td>
+  <td align="center">BioRad Semi-Skirted 96 well plates</td>
+  <td align="center">HSS9601</td>
+</tr>
+<tr>
+  <td align="center">EP_MTP_384F</td>
+  <td align="center">384-well flat-bottom plates for Synergy</td>
+  <td align="center">12-566-615</td>
+</tr>
+<tr>
+  <td align="center">MoBio_DWP_ep</td>
+  <td align="center">MoBio 2mL Deep Well Plates</td>
+  <td align="center">27100-4-EP-DWP</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h2 id="references"><strong>References</strong></h2>
+
+<blockquote>
+  <p>ASMsociety: Microbial Diversity Research Priorities- A Working Document for Mti-Agency Consideration. c2015. American Society of Microbiology. [Accessed: Aug 2015]. <a href="http://www.asm.org/index.php/public-affairs-report/114-unknown/unknown/5046-microbial-diversity-research-priorities-a-working-document-for-mti-agency-consideration">http://www.asm.org/index.php/public-affairs-report/114-unknown/unknown/5046-microbial-diversity-research-priorities-a-working-document-for-mti-agency-consideration</a></p>
+  
+  <p>Bentley R, Balasubramanian S, Swedlow HP, Smith GP, Milton J, Brown CG, Hall KP, Evers DJ, Barnes CL, Bignall HR, et al. 2008. Accurate whole human genome sequencing using reversible terminator chemistty. Nature 456(7218):53-59. Doi: 10.1038/nature07517 </p>
+  
+  <p>Capaoraso JG, Lauber CL, Walters, WA, Berg-Lyons D, Lozupone CA, Turnbaugh PJ, Fierer N, Knight R. 2011. Global patters of 16S rRNA diversity at a depth of millions of sequences per sample. Proc. Natl. Acad. Sci. USA 108(suppl.1):4516-4522. Doi: 10.1073/pnas.1000080107.</p>
+  
+  <p>Kozich JJ, Westcott SL, Baxter NT, Highlander SK, Schloss PD. 2013. Development of a dual –index sequencing strategy and curation pipline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform. Appl Envrion Microbiol. 79(17)5112-20. Doi: 10.1128/AEM.01043-13 </p>
+  
+  <p>Loman NJ, Misra RV, Dallman TJ, Constantinidou C, Gharbia SE, Wain J, pallen MJ. 2012. Performance comparison of benchtop high-throughput sequencing platforms. Nature Biotechnology. 30(5):434-439. Doi: 10.1038/nbt.2198</p>
+  
+  <p>Salipante SJ, Kawashima T, Rosenthal C, Hoogestraat DR, Cummings LA, Sengupta DJ, Harkins TT, Cookson BT, Hoffman NG. 2014. Appli. Environ. Microbiol. 80(24):7583. Doi: 10.1128/AEM.02206-14</p>
+</blockquote>
